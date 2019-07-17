@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Yilin Sun</title>
+    <title>Product Hunt</title>
 
 
 
@@ -49,6 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
               {% if user.is_authenticated %}
+              <a class="nav-item nav-link" href="{% url 'create'%}">Create</a>
               <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
               <form id="logout" action="{% url 'logout'%}" method="POST">
               {% csrf_token %}
